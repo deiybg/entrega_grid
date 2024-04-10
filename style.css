@@ -22,7 +22,7 @@
 }
 
 body {
-  width: 90%;
+  width: 100%;
   height: 90vh;
   margin: 0;
   display: grid;
@@ -46,13 +46,13 @@ section > img {
 }
 
 header {
-    
   grid-area: header;
   display: grid;
   background-color: var(--blue-color);
   color: var(--primary-color);
   place-items: center;
   padding: var(--spacing);
+  height: auto;
 }
 
 header > h1 {
@@ -107,6 +107,7 @@ footer {
   color: var(--primary-color);
   font-size: 1em;
   padding: var(--spacing);
+  background-size: cover;
 }
 footer > button {
   width: 30%;
@@ -119,23 +120,41 @@ footer > button {
   font-weight: 800;
 }
 
-
 @media screen and (max-width: 1078px) {
-
-    footer{
-        grid-column: 1/2;
-        grid-row: 8/9;
-    }
-    .alumni{
-        grid-column: 1/2;
-        grid-row: 7/8;
-    }
-    
-    body {
-      width: 100%;  
-      grid-template-columns: 1fr; 
-      grid-template-rows: auto;
-      
-    }
+  header {
+    height: 600px;
+  }
+  footer {
+    grid-column: 1/2;
+    grid-row: 8/9;
+    height: 300px;
+  }
+  .alumni {
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
+  .student {
+    grid-column: 1/2;
+    grid-row: 4/5;
   }
 
+  main {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    height: 300px;
+  }
+  .time {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  .school {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
